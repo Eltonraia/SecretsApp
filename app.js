@@ -10,7 +10,6 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 
 mongoose.connect("mongodb://localhost:27017/userDB", { useNewUrlParser: true });
-mongoose.set("strictQuery", false);
 
 app.get("/", function (req, res) {
   res.render("home");
