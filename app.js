@@ -19,9 +19,9 @@ const userSchema = new mongoose.Schema({
 });
 
 // This is the secret key that will be used to encrypt the password
-const secret = "Thisisourlittlesecret.";
+//const secret = "Thisisourlittlesecret.";
 userSchema.plugin(encrypt, {
-  secret: secret,
+  secret: process.env.SECRET,
   encryptedFields: ["password"],
 });
 
